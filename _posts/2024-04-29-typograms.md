@@ -6,7 +6,6 @@ description: this is what included typograms code could look like
 categories: sample-posts
 typograms: true
 hidden: true
-
 ---
 
 This is an example post with some [typograms](https://github.com/google/typograms/) code.

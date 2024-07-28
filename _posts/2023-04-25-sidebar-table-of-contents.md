@@ -7,7 +7,6 @@ categories: sample-posts
 giscus_comments: true
 related_posts: false
 hidden: true
-
 toc:
   sidebar: left
 ---

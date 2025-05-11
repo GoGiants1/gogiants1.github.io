@@ -1,10 +1,10 @@
 github_users:
-  - gogiants1
+  - GoGiants1
 
 repo_description_lines_max: 2
 
 github_repos:
-  - gogiants1/MLVU-project
+  - GoGiants1/MLVU-project
   - wafflestudio/siksha-crawler
   - ColaboAI/WeGoGym-api
   - ColaboAI/WeGoGym-RN

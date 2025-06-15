@@ -258,7 +258,7 @@ jekyll-archives:
     enabled: [year, tags, categories] # enables year, tag and category archives (remove if you need to disable one of them).
 
 display_tags: ["paper-review", "mllm", "llm", "unified-mllm"] # these tags will be displayed on the front page of your blog
-display_categories: ["paper-review", "deep-learning", "math & statistics", "computer-science"] # these categories will be displayed on the front page of your blog
+display_categories: ["deep-learning", "math & statistics", "computer-science"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar

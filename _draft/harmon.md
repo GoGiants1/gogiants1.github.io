@@ -12,5 +12,4 @@ toc:
 
 ## TL;DR
 
-
 ## Introduction

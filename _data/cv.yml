@@ -1,97 +1,180 @@
-# - title: General Information
-#   type: map
-#   contents:
-#     - name: Full Name
-#       value: Albert Einstein
-#     - name: Date of Birth
-#       value: 14th March 1879
-#     - name: Languages
-#       value: English, German
+cv:
+  name: Hyungwook Choi
+  label: PhD Student, Visual Information Processing Lab, Seoul National University
+  email: hwchooi224@gmail.com
+  website: https://gogiants1.github.io
+  summary: >
+    I am a PhD student at the Visual Information Processing Lab at Seoul National University.
+    My research interests include generative modeling, multi-modality, multi-modal large language models,
+    and data selection for MLLMs.
 
-# - title: Education
-#   type: time_table
-#   contents:
-#     - title: PhD
-#       institution: University of Zurich, Zurich, Switzerland
-#       year: 1905
-#       description:
-#         - Description 1.
-#         - Description 2.
-#         - title: Description 3.
-#           contents:
-#             - Sub-description 1.
-#             - Sub-description 2.
-#     - title: Federal teaching diploma
-#       institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-#       year: 1900
-#       description:
-#         - Description 1.
-#         - Description 2.
+  sections:
+    Education:
+      - institution: Seoul National University
+        studyType: Ph.D. Student
+        area: Computer Science and Engineering
+        start_date: Mar 2026
+        end_date: Present
+        highlights:
+          - "Advisor: Prof. Joonseok Lee"
+          - Researching multi-modal large language models, generative modeling, and data selection for MLLMs.
 
-# - title: Experience
-#   type: time_table
-#   contents:
-#     - title: Professor of Theoretical Physics
-#       institution: Institute for Advanced Study, Princeton University
-#       year: 1933 - 1955
-#       description:
-#         - Description 1.
-#         - Description 2.
-#         - title: Description 3.
-#           contents:
-#             - Sub-description 1.
-#             - Sub-description 2.
-#     - title: Visiting Professor
-#       institution: California Institute of Technology, Pasadena, California, US
-#       year: 1933
-#       description:
-#         - Description 1.
-#         - Description 2.
+      - institution: Seoul National University
+        studyType: M.S.
+        area: Computer Science and Engineering
+        start_date: Mar 2024
+        end_date: Feb 2026
+        highlights:
+          - "Advisor: Prof. Joonseok Lee"
+          - "Research interests: multimodal large language models and learning to rank in computer vision."
 
-#     - title: Director
-#       institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-#       year: 1917-1933
+      - institution: Seoul National University
+        studyType: B.S.
+        area: Computer Science and Engineering
+        start_date: Mar 2016
+        end_date: Feb 2023
+        highlights:
+          - "Minor: Civil and Environmental Engineering"
 
-#     - title: Professor of Theoretical Physics
-#       institution: Karl-Ferdinand University, Prague, Czechoslovakia
-#       year: 1911 - 1917
-#       description:
+    Academic Interests:
+      - name: Research
+        keywords:
+          - Generative modeling
+          - Multi-modality
+          - Multi-modal large language models
+          - Data selection for MLLMs
 
-#     - title: Associate Professor of Theoretical Physics
-#       institution: University of Zurich, Zurich, Switzerland
-#       year: 1909 - 1911
+    Experience:
+      - company: NAVER Cloud
+        position: Research Engineer Intern / Industry-Academia Collaboration
+        start_date: Mar 2025
+        end_date: Apr 2026
+        summary: Vision Understanding / HyperCLOVA X
+        highlights:
+          - Conducted model-based evaluation and labeling of large-scale proprietary MLLM SFT data to identify and filter low-quality samples.
+          - Performed ablation studies on a 3B parameter model to analyze the impact of model components and data variations.
+          - Completed a six-month AI research engineering internship, followed by industry-academia collaboration through April 2026.
 
-# - title: Open Source Projects
-#   type: time_table
-#   contents:
-#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-#       year: 2015-now
-#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+      - company: ColaboAI
+        position: Co-founder, Full-Stack Developer
+        start_date: Jul 2022
+        end_date: Apr 2023
+        summary: Fitness and online music collaboration services
+        highlights:
+          - Designed and developed a full-stack application for finding fitness mates.
+          - Developed an online music collaboration service using React and Django.
 
-# - title: Honors and Awards
-#   type: time_table
-#   contents:
-#     - year: 1921
-#       items:
-#         - Nobel Prize in Physics
-#         - Matteucci Medal
-#     - year: 2029
-#       items:
-#         - Max Planck Medal
+      - company: FriendliAI
+        position: Software Engineering Intern
+        start_date: Mar 2022
+        end_date: Jun 2022
+        summary: PeriFlow MLOps product
+        highlights:
+          - Implemented an Angular web dashboard with data visualization for the PeriFlow MLOps product.
+          - Built a linting plugin library to improve team code quality.
 
-# - title: Academic Interests
-#   type: nested_list
-#   contents:
-#     - title: Topic 1.
-#       items:
-#         - Description 1.
-#         - Description 2.
-#     - title: Topic 2.
-#       items:
-#         - Description 1.
-#         - Description 2.
+      - company: NAVER
+        position: Software Engineering Intern
+        start_date: Dec 2021
+        end_date: Feb 2022
+        summary: AutoML MVP product
+        highlights:
+          - Developed an AutoML MVP product using React.js and Golang.
+          - Studied AutoML theory to support product prototyping.
 
-# - title: Other Interests
-#   type: list
-#   contents:
-#     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+      - company: Paprika Data Lab
+        position: Software Engineering Intern
+        start_date: Jul 2021
+        end_date: Aug 2021
+        summary: Cada mobile application
+        highlights:
+          - Developed and released a React Native image-swipe feature for reviewing crowd-sourced data, tested with 23,000 users.
+          - Built a payment page using React.js and Firebase.
+
+    Publications:
+      - title: A More Word-like Image Tokenization for MLLMs
+        publisher: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026
+        date: 2026
+        url: https://arxiv.org/abs/2605.17954
+        summary: >
+          Hyun Lee, Hyemin Jeong, Yejin Kim, **Hyungwook Choi**, Hyunsoo Cho,
+          Soo Kyung Kim, Joonseok Lee.
+
+      - title: Fine-Grained Multi Image Object Hallucination Benchmark
+        publisher: IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026
+        date: 2026
+        url: https://scholar.google.com/citations?view_op=view_citation&hl=en&user=3GtXZxIAAAAJ&citation_for_view=3GtXZxIAAAAJ:9yKSN-GCB0IC
+        summary: >
+          J. Min, C. Kim, **Hyungwook Choi**, Y. Kim, K. Kim, Y. Jo, J. Lee.
+
+      - title: HyperCLOVA X 8B Omni
+        publisher: arXiv preprint arXiv:2601.01792, 2026
+        date: 2026
+        url: https://arxiv.org/abs/2601.01792
+        summary: >
+          NAVER Cloud HyperCLOVA X Team.
+
+      - title: HyperCLOVA X 32B Think
+        publisher: arXiv preprint arXiv:2601.03286, 2026
+        date: 2026
+        url: https://arxiv.org/abs/2601.03286
+        summary: >
+          NAVER Cloud HyperCLOVA X Team.
+
+      - title: HyperCLOVA X THINK Technical Report
+        publisher: arXiv preprint arXiv:2506.22403, 2025
+        date: 2025
+        url: https://arxiv.org/abs/2506.22403
+        summary: >
+          NAVER Cloud HyperCLOVA X Team.
+
+      - title: Latent Diffusion Models with Masked AutoEncoders
+        publisher: IEEE/CVF International Conference on Computer Vision (ICCV), 2025
+        date: 2025
+        url: https://arxiv.org/abs/2507.09984
+        summary: >
+          Junho Lee, Jeongwoo Shin, **Hyungwook Choi**, Joonseok Lee.
+
+    Projects:
+      - name: Scene Text Aware Style Transfer Diffusion Model
+        summary: Research project, Mar 2024 - Jun 2024
+        highlights:
+          - Led a project on combining scene text editing with style transfer.
+          - Developed a Latent Diffusion Model-based approach that integrates style transfer and scene text generation.
+          - Analyzed and refined cross-attention behavior in the LDM U-Net to improve text accuracy and reduce style entanglement.
+
+      - name: Social Fitness App
+        url: https://github.com/ColaboAI/WeGoGym-RN
+        summary: React Native and FastAPI mobile app, Dec 2022 -
+        highlights:
+          - Designed and developed a cross-platform mobile app for finding fitness mates.
+          - Built real-time chat with Redis-backed messaging and WebSocket communication.
+
+      - name: Hyper Local Social Media
+        summary: React web service, Feb 2023 -
+        highlights:
+          - Planned and implemented a personalized memory sharing platform on a map with Google Maps integration and note writing.
+          - Won 1st place in an on-campus web development club hackathon.
+
+      - name: Cafeteria Menu Notifier App in SNU
+        summary: FastAPI and Python server, Sep 2022 -
+        highlights:
+          - Maintained and extended a food review and cafeteria menu crawling server.
+
+      - name: Analysis of Jeonse Loans Data in Seoul's Gwanak District
+        summary: Data analysis project, Jun 2022
+        highlights:
+          - Collected Jeonse price data through web scraping and analyzed it with multiple regression, hedonic price modeling, and machine learning.
+          - Found a 25% Jeonse price difference associated with loan eligibility.
+
+      - name: Cover Song Sharing Service
+        summary: React and Django web service, Sep 2021 - Dec 2021
+        highlights:
+          - Planned and implemented a music editing-focused web service.
+          - Practiced test-driven development with Python unittest and React Testing Library.
+
+      - name: Hands-free Recipe-reading App
+        summary: React Native mobile app, Mar 2021 - Jun 2021
+        highlights:
+          - Built a mobile app that reads recipes aloud using Text To Speech and the YouTube API.
+          - Implemented recognition and speech output for recipe text in images.

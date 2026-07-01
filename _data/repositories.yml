@@ -3,8 +3,47 @@ github_users:
 
 repo_description_lines_max: 2
 
+github_user_metadata:
+  GoGiants1:
+    name: Hyungwook Choi
+    description: Research code, coursework projects, and applied software engineering work.
+    badges:
+      - Research
+      - Multimodal AI
+      - Software
+
 github_repos:
   - GoGiants1/MLVU-project
   - wafflestudio/siksha-crawler
   - ColaboAI/WeGoGym-api
   - ColaboAI/WeGoGym-RN
+
+repo_metadata:
+  GoGiants1/MLVU-project:
+    description: SNU 2024-1 MLVU project repository.
+    language: Python
+    badges:
+      - Multimodal learning
+      - Research project
+      - Poetry
+  wafflestudio/siksha-crawler:
+    description: Web crawler for Siksha, the Seoul National University dining service by Wafflestudio.
+    language: Python
+    badges:
+      - Web crawling
+      - Data pipeline
+      - Wafflestudio
+  ColaboAI/WeGoGym-api:
+    description: FastAPI backend for We Go Gym, an LLM-powered fitness matching app.
+    language: Python
+    badges:
+      - FastAPI
+      - Backend
+      - LLM app
+  ColaboAI/WeGoGym-RN:
+    description: React Native mobile app for We Go Gym.
+    language: TypeScript
+    badges:
+      - React Native
+      - Mobile
+      - LLM app

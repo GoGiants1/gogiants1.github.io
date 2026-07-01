@@ -1,34 +1,36 @@
-{% assign lang = site.lang | split: '-' | first %}
+{% assign user = include.username %}
+{% assign user_meta = site.data.repositories.github_user_metadata[user] %}
 
-{% case lang %}
-  {% when 'pt' %}
-    {% assign lang = site.lang %}
+<div class="repo p-2 w-100">
+  <a
+    class="card hoverable repository-card text-left text-decoration-none"
+    href="https://github.com/{{ user }}"
+    aria-label="{{ user }} on GitHub"
+  >
+    <div class="card-body repository-card__body">
+      <div class="repository-card__header">
+        <div>
+          <div class="repository-card__eyebrow">GitHub profile</div>
+          <h5 class="card-title repository-card__title">{{ user_meta.name | default: user }}</h5>
+        </div>
+        <span class="repository-card__icon">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </span>
+      </div>
 
-  {% when 'zh' %}
-    {% assign lang_last = site.lang | split: '-' | last %}
-    {% case lang_last %}
-      {% when 'cn', 'sg', 'my', 'hans' %}
-        {% assign lang = 'cn' %}
-      {% when 'tw', 'hk', 'mo', 'hant' %}
-        {% assign lang = 'zh-tw' %}
-    {% endcase %}
+      {% if user_meta.description %}
+        <p class="card-text font-weight-light repository-card__description">{{ user_meta.description }}</p>
+      {% endif %}
 
-    {% comment %} Add a new language using when... if needed {% endcomment %}
-    {% comment %} If you still encounter language-display issues, check the available locale codes in github-readme-stats (different from ISO-639 standard used in your website) {% endcomment %}
-    {% comment %} https://github.com/anuraghazra/github-readme-stats?tab=readme-ov-file#available-locales {% endcomment %}
-{% endcase %}
+      {% if user_meta.badges %}
+        <div class="repository-card__tags">
+          {% for badge in user_meta.badges %}
+            <span class="repository-card__tag">{{ badge }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
 
-<div class="repo p-2 text-center">
-  <a href="https://github.com/{{ include.username }}">
-    <img
-      class="only-light w-100"
-      alt="{{ include.username }}"
-      src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_light }}&locale={{ lang }}&show_icons=true"
-    >
-    <img
-      class="only-dark w-100"
-      alt="{{ include.username }}"
-      src="https://github-readme-stats.vercel.app/api/?username={{ include.username }}&theme={{ site.repo_theme_dark }}&locale={{ lang }}&show_icons=true"
-    >
+      <span class="repository-card__eyebrow mt-3">github.com/{{ user }}</span>
+    </div>
   </a>
 </div>

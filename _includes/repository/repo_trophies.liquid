@@ -1,42 +1,32 @@
-<div class="repo p-2 text-center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <span class="d-none d-sm-none d-md-block">
-      <img
-        class="only-light"
-        alt="{{ include.username }}"
-        src="https://github-profile-trophy.vercel.app/?username={{ include.username }}&theme={{ site.repo_trophies.theme_light }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=6"
-      >
-      <img
-        class="only-dark"
-        alt="{{ include.username }}"
-        src="https://github-profile-trophy.vercel.app/?username={{ include.username }}&theme={{ site.repo_trophies.theme_dark }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=6"
-      >
-    </span>
+{% assign user = include.username %}
+{% assign user_meta = site.data.repositories.github_user_metadata[user] %}
 
-    <span class="d-none d-sm-block d-md-none">
-      <img
-        class="only-light"
-        alt="{{ include.username }}"
-        src="https://github-profile-trophy.vercel.app/?username={{ include.username }}&theme={{ site.repo_trophies.theme_light }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=4"
-      >
-      <img
-        class="only-dark"
-        alt="{{ include.username }}"
-        src="https://github-profile-trophy.vercel.app/?username={{ include.username }}&theme={{ site.repo_trophies.theme_dark }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=4"
-      >
-    </span>
+<div class="repo p-2 w-100">
+  <a
+    class="card hoverable repository-card text-left text-decoration-none"
+    href="https://github.com/{{ user }}?tab=repositories"
+    aria-label="{{ user }} repositories on GitHub"
+  >
+    <div class="card-body repository-card__body">
+      <div class="repository-card__header">
+        <div>
+          <div class="repository-card__eyebrow">Repository focus</div>
+          <h5 class="card-title repository-card__title">{{ user }}</h5>
+        </div>
+        <span class="repository-card__icon">
+          <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+        </span>
+      </div>
 
-    <span class="d-block d-sm-none">
-      <img
-        class="only-light"
-        alt="{{ include.username }}"
-        src="https://github-profile-trophy.vercel.app/?username={{ include.username }}&theme={{ site.repo_trophies.theme_light }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=3"
-      >
-      <img
-        class="only-dark"
-        alt="{{ include.username }}"
-        src="https://github-profile-trophy.vercel.app/?username={{ include.username }}&theme={{ site.repo_trophies.theme_dark }}&locale={{ site.lang }}&margin-w=15&margin-h=15&no-bg=true&rank=-C&column=3"
-      >
-    </span>
+      {% if user_meta.badges %}
+        <div class="repository-card__tags">
+          {% for badge in user_meta.badges %}
+            <span class="repository-card__tag">{{ badge }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <span class="repository-card__eyebrow mt-3">View repositories on GitHub</span>
+    </div>
   </a>
 </div>

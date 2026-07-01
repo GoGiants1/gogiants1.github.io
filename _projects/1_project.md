@@ -1,13 +1,13 @@
 ---
 layout: page
 title: We Go Gym
-description: A fitness app that helps users find the best gym-mate for their needs, powered by Large Language Models.
+description: Cross-platform social fitness app with real-time chat and gym-mate matching.
 img: /assets/img/we-go-gym/logo.png
-importance: 1
-category: work
+importance: 2
+category: product
 ---
 
-A Cross Platform Mobile Application that helps users find the best gym-mate for their needs, powered by Large Language Model API. The app is built using React Native and FastAPI. The app uses a large language model to answer user queries and provide recommendations for gym-mates based on user preferences. The app also provides a real-time chat feature to communicate with potential gym-mates.
+We Go Gym is a cross-platform mobile application that helps users find fitness mates. The app is built with React Native and FastAPI, and includes user matching, mobile UI, and real-time chat backed by Redis and WebSocket communication.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

@@ -1,0 +1,20 @@
+/*******************************************************************************
+ * CV customization
+ ******************************************************************************/
+
+.table-cv .badge {
+  align-items: center;
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 1.1;
+  min-height: 1.5rem;
+  padding: 0.25em 0.5em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cv .table-cv p.location {
+  display: none;
+  margin: 0;
+}

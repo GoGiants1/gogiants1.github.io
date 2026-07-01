@@ -1,0 +1,42 @@
+{% assign repo_url = include.repository | split: '/' %}
+{% assign repo_owner = repo_url[0] %}
+{% assign repo_name = repo_url[1] %}
+{% assign repo_meta = site.data.repositories.repo_metadata[include.repository] %}
+{% if site.data.repositories.github_users contains repo_owner %}
+  {% assign repo_title = repo_name %}
+{% else %}
+  {% assign repo_title = include.repository %}
+{% endif %}
+
+<div class="repo p-2 w-100">
+  <a
+    class="card hoverable repository-card text-left text-decoration-none"
+    href="https://github.com/{{ include.repository }}"
+    aria-label="{{ include.repository }} on GitHub"
+  >
+    <div class="card-body repository-card__body">
+      <div class="repository-card__header">
+        <div>
+          <div class="repository-card__eyebrow">{{ repo_owner }}</div>
+          <h5 class="card-title repository-card__title">{{ repo_title }}</h5>
+        </div>
+        <span class="repository-card__icon">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </span>
+      </div>
+
+      {% if repo_meta.description %}
+        <p class="card-text font-weight-light repository-card__description">{{ repo_meta.description }}</p>
+      {% endif %}
+
+      <div class="repository-card__tags">
+        {% if repo_meta.language %}
+          <span class="repository-card__tag repository-card__tag--primary">{{ repo_meta.language }}</span>
+        {% endif %}
+        {% for badge in repo_meta.badges %}
+          <span class="repository-card__tag">{{ badge }}</span>
+        {% endfor %}
+      </div>
+    </div>
+  </a>
+</div>

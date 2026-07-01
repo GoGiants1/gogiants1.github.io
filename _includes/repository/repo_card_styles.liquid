@@ -1,0 +1,110 @@
+<style>
+  .repository-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  @media (min-width: 768px) {
+    .repository-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .repository-grid .repo {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    display: flex;
+  }
+
+  .repository-card {
+    width: 100%;
+    min-height: 13.75rem;
+    color: var(--global-text-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--global-theme-color) 5%, transparent), transparent 42%),
+      var(--global-card-bg-color);
+    box-shadow: none;
+  }
+
+  .repository-card:hover {
+    color: var(--global-text-color);
+    text-decoration: none;
+    border-color: color-mix(in srgb, var(--global-theme-color) 45%, var(--global-divider-color));
+  }
+
+  .repository-card__body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .repository-card__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .repository-card__eyebrow {
+    font-size: 0.78rem;
+    color: var(--global-text-color-light);
+  }
+
+  .repository-card__title {
+    margin: 0.1rem 0 0;
+    font-size: 1.02rem;
+    line-height: 1.3;
+  }
+
+  .repository-card__icon {
+    width: 2rem;
+    height: 2rem;
+    flex: 0 0 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--global-theme-color);
+    border: 1px solid color-mix(in srgb, var(--global-theme-color) 30%, transparent);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--global-theme-color) 8%, transparent);
+  }
+
+  .repository-card__description {
+    flex: 1 1 auto;
+    margin-bottom: 1rem;
+    color: var(--global-text-color);
+    line-height: 1.45;
+  }
+
+  .repository-card__tags {
+    min-height: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 0.35rem;
+  }
+
+  .repository-card__tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.55rem;
+    padding: 0.15rem 0.5rem;
+    font-size: 0.78rem;
+    color: var(--global-text-color);
+    border: 1px solid var(--global-divider-color);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--global-bg-color) 82%, var(--global-card-bg-color));
+  }
+
+  .repository-card__tag--primary {
+    color: var(--global-theme-color);
+    border-color: color-mix(in srgb, var(--global-theme-color) 35%, transparent);
+    background: color-mix(in srgb, var(--global-theme-color) 9%, transparent);
+  }
+</style>

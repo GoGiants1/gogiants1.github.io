@@ -1,0 +1,32 @@
+{% assign user = include.username %}
+{% assign user_meta = site.data.repositories.github_user_metadata[user] %}
+
+<div class="repo p-2 w-100">
+  <a
+    class="card hoverable repository-card text-left text-decoration-none"
+    href="https://github.com/{{ user }}?tab=repositories"
+    aria-label="{{ user }} repositories on GitHub"
+  >
+    <div class="card-body repository-card__body">
+      <div class="repository-card__header">
+        <div>
+          <div class="repository-card__eyebrow">Repository focus</div>
+          <h5 class="card-title repository-card__title">{{ user }}</h5>
+        </div>
+        <span class="repository-card__icon">
+          <i class="fa-solid fa-code-branch" aria-hidden="true"></i>
+        </span>
+      </div>
+
+      {% if user_meta.badges %}
+        <div class="repository-card__tags">
+          {% for badge in user_meta.badges %}
+            <span class="repository-card__tag">{{ badge }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <span class="repository-card__eyebrow mt-3">View repositories on GitHub</span>
+    </div>
+  </a>
+</div>
